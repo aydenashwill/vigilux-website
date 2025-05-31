@@ -1,48 +1,29 @@
-// File: pages/index.jsx
-
-import Head from 'next/head';
+// pages/index.jsx
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Vigilux – Coming Soon</title>
-        <meta name="description" content="Vigilux is launching soon. Join the waitlist." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+    <section className="relative h-screen bg-black overflow-hidden">
+      {/* Hero image */}
+      <img
+        src="/images/hero.png"
+        alt="Operator with Night Vision"
+        className="object-cover w-full h-full brightness-50"
+      />
 
-      <main className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
-        <div className="text-center px-4">
-          {/* Logo (your “hero image”) */}
-          <img
-            src="/logo.png"
-            alt="Vigilux Logo"
-            className="mx-auto mb-6 w-32 h-32"
-          />
+      {/* Gradient overlay for contrast */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" />
 
-          {/* Headline */}
-          <h1 className="text-4xl font-bold mb-4">
-            Vigilux is coming soon.
-          </h1>
-          <p className="mb-8 text-lg">
-            Sign up below and we’ll let you know as soon as we launch.
-          </p>
-
-          {/* Embedded Google Form */}
-          <div className="mx-auto max-w-lg">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLScW3KdR_kCXQRL5WrjGQ5woDmJv1jFmVgNLRAoycApPAOEYEA/viewform?embedded=true"
-              width="100%"
-              height="800"
-              frameBorder="0"
-              marginHeight="0"
-              marginWidth="0"
-            >
-              Loading…
-            </iframe>
-          </div>
-        </div>
-      </main>
-    </>
+      {/* Centered headline */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+        <h1 className="font-heading text-7xl md:text-8xl text-brand uppercase">
+          Vigilux
+        </h1>
+        <p className="mt-4 font-body text-xl md:text-2xl text-gray-200">
+          Built for Those Who Endure.
+        </p>
+        {/* Preorder Now button removed */}
+      </div>
+    </section>
   );
 }
+
