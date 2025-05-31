@@ -1,34 +1,48 @@
-// pages/index.jsx
+// File: pages/index.jsx
+
+import Head from 'next/head';
+
 export default function Home() {
   return (
-    <section className="relative h-screen bg-black overflow-hidden">
-      {/* Brighter hero image */}
-      <img
-        src="/images/hero.png"
-        alt="Operator with Night Vision"
-        className="object-cover w-full h-full brightness-90"
-      />
+    <>
+      <Head>
+        <title>Vigilux – Coming Soon</title>
+        <meta name="description" content="Vigilux is launching soon. Join the waitlist." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 
-      {/* Softer gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60" />
+      <main className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
+        <div className="text-center px-4">
+          {/* Logo */}
+          <img
+            src="/logo.png"
+            alt="Vigilux Logo"
+            className="mx-auto mb-6 w-32 h-32"
+          />
 
-      {/* Centered copy */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-        {/* Greyscale background behind heading */}
-        <h1 className="relative font-heading text-7xl md:text-8xl text-brand uppercase">
-          <span className="relative z-10">Vigilux</span>
-          <span className="absolute inset-0 bg-gray-700 opacity-50 -z-10"></span>
-        </h1>
-        <p className="mt-4 font-body text-xl md:text-2xl text-gray-200">
-          Built for Those Who Endure.
-        </p>
-        <a
-          href="/preorders"
-          className="mt-8 inline-block px-10 py-4 border-2 border-white text-white font-semibold uppercase tracking-wider hover:bg-white hover:text-black transition"
-        >
-          Preorder Now
-        </a>
-      </div>
-    </section>
+          {/* Headline */}
+          <h1 className="text-4xl font-bold mb-4">
+            Vigilux is coming soon.
+          </h1>
+          <p className="mb-8 text-lg">
+            Sign up below and we’ll let you know as soon as we launch.
+          </p>
+
+          {/* (Optional) Embedded Google Form only */}
+          <div className="mx-auto max-w-lg">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScW3KdR_kCXQRL5WrjGQ5woDmJv1jFmVgNLRAoycApPAOEYEA/viewform?embedded=true"
+              width="100%"
+              height="800"
+              frameBorder="0"
+              marginHeight="0"
+              marginWidth="0"
+            >
+              Loading…
+            </iframe>
+          </div>
+        </div>
+      </main>
+    </>
   );
 }
