@@ -15,11 +15,11 @@ export default function Layout({ children }) {
             />
           </Link>
           {/* Navigation tabs in white, red on hover */}
-          <Link href="/"         className="hover:text-brand transition">Home</Link>
-          <Link href="/about"    className="hover:text-brand transition">About</Link>
+          <Link href="/" className="hover:text-brand transition">Home</Link>
+          <Link href="/about" className="hover:text-brand transition">About</Link>
           <Link href="/products" className="hover:text-brand transition">Products</Link>
-          <Link href="/preorders"className="hover:text-brand transition">Preorders</Link>
-          <Link href="/contact"  className="hover:text-brand transition">Contact</Link>
+          <Link href="/phoenix" className="hover:text-brand transition">Phoenix</Link>
+          <Link href="/contact" className="hover:text-brand transition">Contact</Link>
         </nav>
       </header>
 
@@ -31,3 +31,4 @@ export default function Layout({ children }) {
     </>
   );
 }
+
