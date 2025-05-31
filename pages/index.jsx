@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
         <div className="text-center px-4">
-          {/* Logo */}
+          {/* Logo (your “hero image”) */}
           <img
             src="/logo.png"
             alt="Vigilux Logo"
@@ -28,7 +28,7 @@ export default function Home() {
             Sign up below and we’ll let you know as soon as we launch.
           </p>
 
-          {/* (Optional) Embedded Google Form only */}
+          {/* Embedded Google Form */}
           <div className="mx-auto max-w-lg">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLScW3KdR_kCXQRL5WrjGQ5woDmJv1jFmVgNLRAoycApPAOEYEA/viewform?embedded=true"
