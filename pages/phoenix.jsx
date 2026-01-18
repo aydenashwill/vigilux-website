@@ -16,14 +16,11 @@ export default function Phoenix() {
       <main className="bg-black text-white">
         {/* HERO */}
         <section className="relative overflow-hidden min-h-[80vh]">
-          {/* Phoenix-specific hero image (NOT reused site-wide) */}
           <img
             src="/images/phoenix-hero.png"
             alt="Phoenix Overwatch"
             className="absolute inset-0 w-full h-full object-cover object-center brightness-60"
           />
-
-          {/* Clean overlays (no random logos) */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/55 to-black/92" />
 
           <div className="relative z-10 vx-container pt-24 pb-16">
@@ -40,9 +37,17 @@ export default function Phoenix() {
               <Link href="/contact" className="vx-btn vx-btn-primary">
                 Request Demo Access
               </Link>
-              <a href="/api/brief" target="_blank" rel="noreferrer" className="vx-btn">
+              <a
+                href="/api/brief"
+                target="_blank"
+                rel="noreferrer"
+                className="vx-btn"
+              >
                 Capability Brief (PDF)
               </a>
+              <Link href="/capabilities" className="vx-btn">
+                Capabilities
+              </Link>
             </div>
 
             <p className="mt-6 text-xs uppercase tracking-[0.25em] text-white/50">
@@ -58,38 +63,93 @@ export default function Phoenix() {
           </h2>
           <p className="mt-4 vx-muted max-w-3xl">
             Phoenix is engineered for disciplined integration and repeatable field performance.
-            This page stays high-confidence and verifiable—no “marketing magic.”
+            This page stays high-confidence and verifiable.
           </p>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="vx-card p-6">
-              <div className="text-sm uppercase tracking-[0.18em] text-white/80">Video Paths</div>
+              <div className="text-sm uppercase tracking-[0.18em] text-white/80">
+                Video Paths
+              </div>
               <p className="mt-3 text-white/80">
-                Baseline analog CVBS for compatibility with FPV receivers/monitors/DVR. Optional digital IP
-                path for RTSP/WebRTC workflows where appropriate.
+                Baseline analog CVBS for compatibility with FPV receivers/monitors/DVR. Optional
+                digital IP path for RTSP/WebRTC workflows where appropriate.
               </p>
             </div>
 
             <div className="vx-card p-6">
-              <div className="text-sm uppercase tracking-[0.18em] text-white/80">Integration</div>
+              <div className="text-sm uppercase tracking-[0.18em] text-white/80">
+                Integration
+              </div>
               <p className="mt-3 text-white/80">
-                Standardized mounting and a single harness approach to reduce custom work and shorten install time.
+                Standardized mounting and a single harness approach to reduce custom work and
+                shorten install time.
               </p>
             </div>
 
             <div className="vx-card p-6">
-              <div className="text-sm uppercase tracking-[0.18em] text-white/80">Production Credibility</div>
+              <div className="text-sm uppercase tracking-[0.18em] text-white/80">
+                Production Credibility
+              </div>
               <p className="mt-3 text-white/80">
-                Controlled BOM with alternates, traveler, traceability, and per-unit acceptance testing
-                (video, power stability, thermal check, link check).
+                Controlled BOM with alternates, traveler, traceability, and per-unit acceptance
+                testing (video, power stability, thermal check, link check).
               </p>
             </div>
 
             <div className="vx-card p-6">
-              <div className="text-sm uppercase tracking-[0.18em] text-white/80">Security (Phased)</div>
+              <div className="text-sm uppercase tracking-[0.18em] text-white/80">
+                Security (Phased)
+              </div>
               <p className="mt-3 text-white/80">
-                Baseline hardening first; Secure/Enterprise follows with validated radios and documented key handling.
+                v1 baseline hardening; v2 Secure/Enterprise follows with validated radios and
+                documented key workflows aligned to customer requirements.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* AI PREVIEW */}
+        <section className="vx-container pb-24">
+          <h2 className="text-2xl md:text-3xl font-heading uppercase tracking-[0.14em]">
+            AI-Enhanced Capabilities (Preview)
+          </h2>
+          <p className="mt-4 vx-muted max-w-3xl">
+            Optional, operator-assisted analytics under development. Release is gated by validation
+            and measured performance targets.
+          </p>
+
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="vx-card overflow-hidden">
+              <img
+                src="/images/ai-preview.png"
+                alt="AI preview"
+                className="w-full h-auto"
+              />
+              <div className="p-6">
+                <div className="text-sm uppercase tracking-[0.18em] text-white/80">
+                  Analytics Preview
+                </div>
+                <p className="mt-3 text-white/70">
+                  Supervised tracking support, stabilization assistance, and controlled overlays—only after validation.
+                </p>
+              </div>
+            </div>
+
+            <div className="vx-card overflow-hidden">
+              <img
+                src="/images/thermal-preview.png"
+                alt="Thermal preview"
+                className="w-full h-auto"
+              />
+              <div className="p-6">
+                <div className="text-sm uppercase tracking-[0.18em] text-white/80">
+                  Thermal Workflow
+                </div>
+                <p className="mt-3 text-white/70">
+                  Viewing + recording workflow designed for repeatable demo readiness and clean integration.
+                </p>
+              </div>
             </div>
           </div>
         </section>
