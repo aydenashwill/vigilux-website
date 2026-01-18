@@ -1,6 +1,5 @@
-// pages/contact.jsx
-
-import Head from 'next/head';
+/// pages/contact.jsx
+import Head from "next/head";
 
 export default function Contact() {
   return (
@@ -10,32 +9,40 @@ export default function Contact() {
         <meta name="description" content="Contact Vigilux" />
       </Head>
 
-      <main className="container mx-auto py-8 px-4">
-        <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
-        <p className="mb-4">
-          Have questions or need more information? Reach out to us directly at{' '}
+      <main className="vx-container py-20">
+        <h1 className="text-3xl md:text-4xl font-heading uppercase tracking-[0.14em]">
+          Contact
+        </h1>
+
+        <p className="mt-6 text-white/80 max-w-2xl">
+          For demos, technical discussions, partnerships, or procurement inquiries:
+        </p>
+
+        <div className="mt-6 vx-card p-6 max-w-2xl">
+          <div className="text-sm uppercase tracking-[0.18em] text-white/70">Primary Email</div>
           <a
-            href="mailto:ayden.ashwill@vigilux.co"
-            className="text-brand hover:underline"
+            className="mt-2 block text-lg text-white hover:underline"
+            href="mailto:vigiluxsystems@gmail.com"
           >
-            ayden.ashwill@vigilux.co
+            vigiluxsystems@gmail.com
           </a>
-          .
-        </p>
-        <p className="mb-6">
-          Or fill out our contact form here:
-        </p>
-        <p>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdz49vwFRljFYTH8EFza0jNUvgKWtzNnCy6e2oJVUidfqEaJg/viewform?usp=header"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand hover:underline"
-          >
-            https://docs.google.com/forms/d/e/1FAIpQLSdz49vwFRljFYTH8EFza0jNUvgKWtzNnCy6e2oJVUidfqEaJg/viewform?usp=header
-          </a>
-        </p>
+        </div>
+
+        <div className="mt-8 vx-card p-6 max-w-2xl">
+          <div className="text-sm uppercase tracking-[0.18em] text-white/70">
+            Request Form
+          </div>
+          <p className="mt-3 text-white/80">
+            If your current Google Form is tied to an old Workspace account, replace it with a new form
+            owned by a Gmail account you control (recommended: the address above).
+          </p>
+
+          <p className="mt-4 text-white/70 text-sm">
+            Update the form link on this page once your new form is created.
+          </p>
+        </div>
       </main>
     </>
   );
 }
+

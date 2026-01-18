@@ -2,9 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base colors */
 html, body {
-  background-color: #000;
+  background: #000;
   color: #fff;
+  height: 100%;
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; text-decoration: none; }
+
+::selection { background: rgba(255, 106, 0, 0.25); }
+
+.vx-container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.vx-card {
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+.vx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: 160ms ease;
+}
+
+.vx-btn:hover {
+  border-color: rgba(255,255,255,0.45);
+}
+
+.vx-btn-primary {
+  background: #ff6a00;
+  color: #0a0a0a;
+  border-color: transparent;
+  font-weight: 700;
+}
+
+.vx-btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.vx-muted { color: rgba(255,255,255,0.72); }
+.vx-soft  { color: rgba(255,255,255,0.86); }
+
+.vx-hr {
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
