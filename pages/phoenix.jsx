@@ -9,146 +9,105 @@ export default function Phoenix() {
         <title>Phoenix Overwatch | Vigilux</title>
         <meta
           name="description"
-          content="Phoenix Overwatch — low-SWaP thermal relay payload for small UAS. Built for rapid integration and operator-controlled workflows."
+          content="Phoenix Overwatch is a low-SWaP thermal ISR payload designed for rapid integration, operator-controlled workflows, and validated performance."
         />
       </Head>
 
       <main className="bg-black text-white">
         {/* HERO */}
-        <section className="relative overflow-hidden min-h-[80vh]">
+        <section className="relative overflow-hidden min-h-[85vh]">
           <img
-            src="/images/phoenix-hero.png"
-            alt="Phoenix Overwatch"
-            className="absolute inset-0 w-full h-full object-cover object-center brightness-60"
+            src="/images/hero/phoenix-hero-operator-uas.png"
+            alt="Phoenix Overwatch operator and UAS payload"
+            className="absolute inset-0 w-full h-full object-cover object-center brightness-[0.85]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/55 to-black/92" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black/85" />
 
-          <div className="relative z-10 vx-container pt-24 pb-16">
-            <h1 className="font-heading text-4xl md:text-6xl uppercase tracking-[0.18em]">
+          <div className="relative z-10 vx-container pt-24 pb-20 md:pt-32 md:pb-28">
+            <p className="text-white/70 uppercase tracking-[0.22em] text-xs md:text-sm flex items-center gap-3">
+              <span className="inline-block h-[1px] w-10 bg-white/30" />
               Phoenix Overwatch
+            </p>
+
+            <h1 className="mt-5 font-heading text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.18em]">
+              Low-SWaP Thermal ISR
+              <br />
+              Built for Reality.
             </h1>
 
-            <p className="mt-5 max-w-3xl text-white/80 text-lg md:text-xl">
-              A low-SWaP thermal relay payload for small UAS platforms—engineered for reliable
-              video paths, rapid integration, and operator-controlled workflows.
+            <p className="mt-6 max-w-2xl text-white/85 text-base md:text-xl leading-relaxed">
+              A rugged, under-slung thermal relay payload engineered for rapid UAS integration,
+              repeatable demos, and operator-controlled workflows — without unnecessary complexity.
             </p>
 
             <div className="mt-10 flex gap-4 flex-wrap">
               <Link href="/contact" className="vx-btn vx-btn-primary">
-                Request Demo Access
+                Request a Demo
               </Link>
-              <a
-                href="/api/brief"
-                target="_blank"
-                rel="noreferrer"
-                className="vx-btn"
-              >
-                Capability Brief (PDF)
-              </a>
-              <Link href="/capabilities" className="vx-btn">
-                Capabilities
+              <Link href="/brief" className="vx-btn">
+                Capability Brief
               </Link>
             </div>
 
-            <p className="mt-6 text-xs uppercase tracking-[0.25em] text-white/50">
-              Development system — specifications and capabilities evolve as validation progresses
+            <p className="mt-6 text-white/55 text-sm">
+              Design-to-cost. Validation-driven. Mission-focused.
             </p>
           </div>
         </section>
 
-        {/* CORE CAPABILITIES */}
-        <section className="vx-container py-20">
-          <h2 className="text-2xl md:text-3xl font-heading uppercase tracking-[0.14em]">
-            Core Capabilities
-          </h2>
-          <p className="mt-4 vx-muted max-w-3xl">
-            Phoenix is engineered for disciplined integration and repeatable field performance.
-            This page stays high-confidence and verifiable.
-          </p>
-
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* OVERVIEW */}
+        <section className="vx-container py-24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="vx-card p-6">
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
-                Video Paths
+                Payload-First Design
               </div>
-              <p className="mt-3 text-white/80">
-                Baseline analog CVBS for compatibility with FPV receivers/monitors/DVR. Optional
-                digital IP path for RTSP/WebRTC workflows where appropriate.
+              <p className="mt-3 text-white/70">
+                Optimized for under-slung mounting on small UAS platforms with minimal integration friction.
               </p>
             </div>
 
             <div className="vx-card p-6">
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
-                Integration
+                Practical Video Paths
               </div>
-              <p className="mt-3 text-white/80">
-                Standardized mounting and a single harness approach to reduce custom work and
-                shorten install time.
+              <p className="mt-3 text-white/70">
+                CVBS baseline for immediate compatibility, with optional IP workflows where required.
               </p>
             </div>
 
             <div className="vx-card p-6">
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
-                Production Credibility
+                Operator-Controlled
               </div>
-              <p className="mt-3 text-white/80">
-                Controlled BOM with alternates, traveler, traceability, and per-unit acceptance
-                testing (video, power stability, thermal check, link check).
-              </p>
-            </div>
-
-            <div className="vx-card p-6">
-              <div className="text-sm uppercase tracking-[0.18em] text-white/80">
-                Security (Phased)
-              </div>
-              <p className="mt-3 text-white/80">
-                v1 baseline hardening; v2 Secure/Enterprise follows with validated radios and
-                documented key workflows aligned to customer requirements.
+              <p className="mt-3 text-white/70">
+                No black boxes. Clear controls, repeatable results, and documented performance.
               </p>
             </div>
           </div>
         </section>
 
-        {/* AI PREVIEW */}
-        <section className="vx-container pb-24">
-          <h2 className="text-2xl md:text-3xl font-heading uppercase tracking-[0.14em]">
-            AI-Enhanced Capabilities (Preview)
-          </h2>
-          <p className="mt-4 vx-muted max-w-3xl">
-            Optional, operator-assisted analytics under development. Release is gated by validation
-            and measured performance targets.
-          </p>
+        {/* CTA */}
+        <section className="vx-container pb-28">
+          <div className="vx-card p-12 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-black" />
 
-          <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="vx-card overflow-hidden">
-              <img
-                src="/images/ai-preview.png"
-                alt="AI preview"
-                className="w-full h-auto"
-              />
-              <div className="p-6">
-                <div className="text-sm uppercase tracking-[0.18em] text-white/80">
-                  Analytics Preview
-                </div>
-                <p className="mt-3 text-white/70">
-                  Supervised tracking support, stabilization assistance, and controlled overlays—only after validation.
-                </p>
-              </div>
-            </div>
+            <div className="relative z-10">
+              <h2 className="text-2xl md:text-3xl font-heading uppercase tracking-[0.14em]">
+                See Phoenix Overwatch in Action
+              </h2>
+              <p className="mt-3 text-white/80 max-w-2xl">
+                Schedule a technical discussion and review integration details, validation approach,
+                and measured performance targets.
+              </p>
 
-            <div className="vx-card overflow-hidden">
-              <img
-                src="/images/thermal-preview.png"
-                alt="Thermal preview"
-                className="w-full h-auto"
-              />
-              <div className="p-6">
-                <div className="text-sm uppercase tracking-[0.18em] text-white/80">
-                  Thermal Workflow
-                </div>
-                <p className="mt-3 text-white/70">
-                  Viewing + recording workflow designed for repeatable demo readiness and clean integration.
-                </p>
+              <div className="mt-7 flex gap-4 flex-wrap">
+                <Link href="/contact" className="vx-btn vx-btn-primary">
+                  Request a Demo
+                </Link>
+                <Link href="/brief" className="vx-btn">
+                  Open Capability Brief
+                </Link>
               </div>
             </div>
           </div>

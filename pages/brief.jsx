@@ -19,8 +19,7 @@ export default function Brief() {
           </h1>
 
           <p className="mt-4 vx-muted max-w-3xl">
-            Download the current Phoenix Overwatch capability brief (PDF). This document is generated live
-            from your website (always up to date with the codebase).
+            Download the current Phoenix Overwatch capability brief (PDF).
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">

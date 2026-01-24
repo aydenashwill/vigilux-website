@@ -14,14 +14,14 @@ export default function Home() {
       </Head>
 
       <main className="bg-black text-white">
-        {/* HERO (FIXED: clean background, no duplicate text, no random logo) */}
+        {/* HERO */}
         <section className="relative overflow-hidden">
           <img
-            src="/images/hero.jpg"
-            alt="Vigilux hero"
-            className="absolute inset-0 w-full h-full object-cover object-center brightness-[0.55]"
+            src="/images/hero/hero-operator-drone-dusk.png"
+            alt="Vigilux operator and drone"
+            className="absolute inset-0 w-full h-full object-cover object-center brightness-[0.85]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/55 to-black/95" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/70" />
 
           <div className="relative z-10 vx-container pt-20 pb-16 md:pt-28 md:pb-24">
             <p className="text-white/70 uppercase tracking-[0.22em] text-xs md:text-sm flex items-center gap-3">
@@ -36,8 +36,8 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-white/80 text-base md:text-xl leading-relaxed">
-              Rugged ISR & thermal relay systems designed for rapid integration, reliable
-              video paths, and operator-controlled workflows.
+              Rugged ISR & thermal relay systems designed for rapid integration,
+              reliable video paths, and operator-controlled workflows.
             </p>
 
             <div className="mt-10 flex gap-4 flex-wrap">
@@ -58,7 +58,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* BRAND PANEL (your branded graphic belongs here, not behind the hero text) */}
+        {/* BRAND PANEL */}
         <section className="vx-container py-14 md:py-18">
           <div className="vx-card overflow-hidden">
             <img
@@ -110,7 +110,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* AI PREVIEW (Home) */}
+        {/* AI PREVIEW */}
         <section className="vx-container pb-24">
           <div className="flex items-end justify-between gap-6 flex-wrap">
             <div>
@@ -118,7 +118,7 @@ export default function Home() {
                 AI-Enhanced Capabilities
               </h2>
               <p className="mt-3 vx-muted max-w-3xl">
-                Preview of optional, operator-assisted analytics under development. Release is gated by
+                Optional operator-assisted analytics under development. Release gated by
                 validation and measured performance targets.
               </p>
             </div>
@@ -132,7 +132,7 @@ export default function Home() {
             <div className="vx-card overflow-hidden">
               <img
                 src="/images/ai-preview.png"
-                alt="AI Enhanced Capabilities Preview"
+                alt="AI preview"
                 className="w-full h-auto"
               />
               <div className="p-6">
@@ -140,7 +140,7 @@ export default function Home() {
                   Preview Module
                 </div>
                 <p className="mt-3 text-white/70">
-                  Supervised tracking support, stabilization assistance, and controlled overlays—only after validation.
+                  Supervised tracking support and controlled overlays—only after validation.
                 </p>
               </div>
             </div>
@@ -148,7 +148,7 @@ export default function Home() {
             <div className="vx-card overflow-hidden">
               <img
                 src="/images/thermal-preview.png"
-                alt="Thermal workflow preview"
+                alt="Thermal workflow"
                 className="w-full h-auto"
               />
               <div className="p-6">
@@ -156,24 +156,17 @@ export default function Home() {
                   Thermal Workflow
                 </div>
                 <p className="mt-3 text-white/70">
-                  Viewing + recording workflow designed for repeatable demo readiness and clean integration.
+                  Viewing + recording workflow designed for repeatable demo readiness.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* FINAL CTA */}
+        {/* REQUEST DEMO — CLEAN BACKGROUND (NO GHOST TEXT) */}
         <section className="vx-container pb-24">
           <div className="vx-card p-10 md:p-12 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-30">
-              <img
-                src="/images/vigilux-demo.png"
-                alt="Request a demo"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-            <div className="absolute inset-0 bg-black/70" />
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-black" />
 
             <div className="relative z-10">
               <h2 className="text-2xl md:text-3xl font-heading uppercase tracking-[0.14em]">
@@ -198,4 +191,3 @@ export default function Home() {
     </>
   );
 }
-

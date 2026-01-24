@@ -10,7 +10,8 @@ function NavLink({ href, children }) {
     <Link
       href={href}
       className={[
-        "text-sm uppercase tracking-[0.18em] transition",
+        "uppercase tracking-[0.18em] transition",
+        "text-sm md:text-base",               // bigger on desktop
         active ? "text-white" : "text-white/70 hover:text-white"
       ].join(" ")}
     >
@@ -24,25 +25,29 @@ export default function Layout({ children }) {
     <div className="min-h-screen bg-black text-white flex flex-col">
       {/* NAV */}
       <header className="sticky top-0 z-50 bg-black/85 backdrop-blur border-b border-white/10">
-        <div className="vx-container py-4 flex items-center justify-between gap-6">
-          <Link href="/" className="flex items-center gap-3">
+        <div className="vx-container py-4 md:py-5 flex items-center justify-between gap-6">
+          <Link href="/" className="flex items-center gap-4">
             <img
               src="/images/vigilux-logo-gray.png"
               alt="Vigilux"
-              className="h-8 w-auto"
+              className="h-9 md:h-11 w-auto"
             />
-            <span className="font-heading text-sm tracking-tactical uppercase text-white/80 hidden sm:inline">
+            <span className="font-heading text-sm md:text-base tracking-tactical uppercase text-white/80 hidden sm:inline">
               The Light That Never Sleeps
             </span>
           </Link>
 
-          <nav className="flex items-center gap-5">
+          <nav className="flex items-center gap-5 md:gap-7">
             <NavLink href="/phoenix">Phoenix</NavLink>
             <NavLink href="/capabilities">Capabilities</NavLink>
             <NavLink href="/products">Products</NavLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/contact">Contact</NavLink>
-            <Link href="/brief" className="vx-btn vx-btn-primary text-sm">
+
+            <Link
+              href="/brief"
+              className="vx-btn vx-btn-primary text-sm md:text-base px-4 md:px-5 py-2.5 md:py-3"
+            >
               Capability Brief
             </Link>
           </nav>
@@ -60,7 +65,7 @@ export default function Layout({ children }) {
               <img
                 src="/images/vigilux-logo-gray.png"
                 alt="Vigilux"
-                className="h-10 w-auto opacity-90"
+                className="h-10 md:h-12 w-auto opacity-90"
               />
               <p className="mt-4 vx-muted max-w-sm">
                 Rugged ISR & thermal relay systems engineered for clarity when it matters.
@@ -85,12 +90,15 @@ export default function Layout({ children }) {
               </div>
               <p className="mt-4 text-white/70">
                 Email:{" "}
-                <a className="text-brand hover:underline" href="mailto:ayden.ashwill@vigilux.co">
-                  ayden.ashwill@vigilux.co
+                <a className="text-brand hover:underline" href="mailto:aydenashwill@vigilux.co">
+                  aydenashwill@vigilux.co
                 </a>
               </p>
               <p className="mt-2 text-white/70">
-                Demo Requests: <Link className="text-brand hover:underline" href="/contact">Request Access</Link>
+                Demo Requests:{" "}
+                <Link className="text-brand hover:underline" href="/contact">
+                  Request Access
+                </Link>
               </p>
             </div>
           </div>

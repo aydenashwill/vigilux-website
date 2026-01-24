@@ -61,4 +61,22 @@ a { color: inherit; text-decoration: none; }
 .vx-hr {
   border: 0;
   border-top: 1px solid rgba(255,255,255,0.10);
+
+  @layer components {
+  /* Desktop-first hero typography that still scales down cleanly */
+  .vx-hero-kicker {
+    @apply text-white/70 uppercase tracking-[0.22em] text-xs md:text-sm flex items-center gap-3;
+  }
+
+  .vx-hero-title {
+    /* less tracking + controlled width so it "fits" inside the hero image */
+    @apply mt-5 font-heading uppercase tracking-[0.10em] leading-[1.05]
+           text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl
+           max-w-[18ch];
+  }
+
+  .vx-hero-lead {
+    @apply mt-6 max-w-2xl text-white/85 text-base md:text-xl leading-relaxed;
+  }
+}
 }
