@@ -129,30 +129,35 @@ export default function About() {
 
               <p className="mt-4 text-white/85 leading-relaxed">
                 Ayden Ashwill is the President and Founder of Vigilux, where he
-                leads overall company strategy, product direction, and
-                system-level engineering. With a background in mechanical
-                engineering and hands-on experience across unmanned systems,
-                sensing payloads, and embedded platforms, Ayden focuses on
-                building practical, mission-ready technologies designed for real
-                operational use.
+                leads company strategy, product direction, and system-level
+                engineering. He brings a background in mechanical engineering
+                with direct exposure to aircraft engineering, combined with
+                hands-on experience across unmanned systems, sensing payloads,
+                and embedded platforms. His work centers on translating rigorous
+                engineering principles into practical, mission-ready
+                technologies built for real operational use.
               </p>
 
               <p className="mt-4 text-white/85 leading-relaxed">
-                Ayden founded Vigilux to address a persistent gap in the market:
-                capable ISR and sensing systems that are reliable, scalable, and
-                cost-disciplined—without the complexity and expense of legacy
-                defense solutions. He oversees end-to-end execution, from system
-                architecture and prototyping to supplier engagement and customer
-                alignment, ensuring Vigilux products are engineered for
-                deployment rather than demonstration.
+                A former collegiate football and baseball athlete, Ayden
+                approaches leadership and engineering with discipline,
+                resilience, and a competitive, execution-driven mindset. He
+                founded Vigilux with a clear mission: <strong>to increase
+                operator safety, reduce cognitive and operational burden, and
+                provide operators with a decisive tactical advantage</strong>{" "}
+                through reliable, easy-to-use sensing systems. He oversees
+                end-to-end execution—from system architecture and prototyping to
+                supplier engagement and customer alignment—ensuring Vigilux
+                products are engineered for deployment rather than
+                demonstration.
               </p>
 
               <p className="mt-4 text-white/85 leading-relaxed">
-                His approach emphasizes technical rigor, design-to-cost
+                Ayden’s leadership emphasizes technical rigor, design-to-cost
                 discipline, and production credibility, positioning Vigilux to
-                deliver sensing solutions aligned with the evolving needs of
-                small-UAS operators, defense partners, and national security
-                stakeholders.
+                deliver sensing solutions that simplify the operator’s job while
+                meeting the evolving demands of small-UAS operators, defense
+                partners, and national security stakeholders.
               </p>
             </article>
 
@@ -233,12 +238,12 @@ export default function About() {
               </p>
 
               <p className="mt-4 text-white/85 leading-relaxed">
-                Austin Russell is the Chief Executive Officer of Vigilux,
-                leading the company with a clear vision for innovation,
-                disciplined growth, and long-term value creation. He holds a
-                Master’s degree in Business and brings a rare combination of
-                strategic insight, financial acumen, and real-world operating
-                experience to the role.
+                Austin Russell is the Chief Executive Officer of Vigilux, leading
+                the company with a clear vision for innovation, disciplined
+                growth, and long-term value creation. He holds a Master’s degree
+                in Business and brings a rare combination of strategic insight,
+                financial acumen, and real-world operating experience to the
+                role.
               </p>
 
               <p className="mt-4 text-white/85 leading-relaxed">
@@ -272,5 +277,3 @@ export default function About() {
     </>
   );
 }
-
-
