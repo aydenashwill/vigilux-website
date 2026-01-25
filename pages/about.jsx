@@ -225,14 +225,38 @@ export default function About() {
               </p>
             </article>
 
-            {/* AUSTIN (TBD) */}
+            {/* AUSTIN */}
             <article className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur md:col-span-2">
               <h3 className="text-xl font-semibold">Austin Russell</h3>
               <p className="mt-1 text-sm text-white/70">
-                Chief Financial Officer (CFO)
+                Chief Executive Officer (CEO)
               </p>
-              <p className="mt-4 text-white/70 leading-relaxed italic">
-                Bio coming soon.
+
+              <p className="mt-4 text-white/85 leading-relaxed">
+                Austin Russell is the Chief Executive Officer of Vigilux,
+                leading the company with a clear vision for innovation,
+                disciplined growth, and long-term value creation. He holds a
+                Master’s degree in Business and brings a rare combination of
+                strategic insight, financial acumen, and real-world operating
+                experience to the role.
+              </p>
+
+              <p className="mt-4 text-white/85 leading-relaxed">
+                A former collegiate athlete, Austin approaches leadership with
+                focus, resilience, and a competitive drive to win in the
+                marketplace. As CEO, he is responsible for defining Vigilux’s
+                strategic direction, building high-performing teams, and
+                executing scalable growth initiatives. He works closely with
+                investors and leadership to align capital strategy, operational
+                execution, and market expansion, ensuring Vigilux is positioned
+                to grow efficiently while maintaining strong fundamentals.
+              </p>
+
+              <p className="mt-4 text-white/85 leading-relaxed">
+                Austin’s hands-on leadership style and data-driven approach
+                enable Vigilux to identify opportunity, manage risk, and execute
+                decisively—laying the foundation for sustainable growth and
+                enduring shareholder value.
               </p>
             </article>
           </div>
@@ -248,4 +272,5 @@ export default function About() {
     </>
   );
 }
+
 
