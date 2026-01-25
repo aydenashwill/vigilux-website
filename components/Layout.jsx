@@ -11,8 +11,8 @@ function NavLink({ href, children }) {
       href={href}
       className={[
         "uppercase tracking-[0.18em] transition",
-        "text-sm md:text-base",               // bigger on desktop
-        active ? "text-white" : "text-white/70 hover:text-white"
+        "text-sm md:text-base", // bigger on desktop
+        active ? "text-white" : "text-white/70 hover:text-white",
       ].join(" ")}
     >
       {children}
@@ -67,8 +67,11 @@ export default function Layout({ children }) {
                 alt="Vigilux"
                 className="h-10 md:h-12 w-auto opacity-90"
               />
-              <p className="mt-4 vx-muted max-w-sm">
-                Rugged ISR & thermal relay systems engineered for clarity when it matters.
+
+              {/* WIDENED + BETTER WRAP */}
+              <p className="mt-4 vx-muted max-w-xl lg:max-w-2xl [text-wrap:pretty]">
+                Rugged ISR &amp; thermal relay systems engineered for clarity
+                when it matters.
               </p>
             </div>
 
@@ -77,10 +80,18 @@ export default function Layout({ children }) {
                 Navigation
               </div>
               <div className="mt-4 flex flex-col gap-3 text-white/70">
-                <Link href="/phoenix" className="hover:text-white">Phoenix Overwatch</Link>
-                <Link href="/capabilities" className="hover:text-white">Capabilities</Link>
-                <Link href="/brief" className="hover:text-white">Capability Brief</Link>
-                <Link href="/contact" className="hover:text-white">Contact</Link>
+                <Link href="/phoenix" className="hover:text-white">
+                  Phoenix Overwatch
+                </Link>
+                <Link href="/capabilities" className="hover:text-white">
+                  Capabilities
+                </Link>
+                <Link href="/brief" className="hover:text-white">
+                  Capability Brief
+                </Link>
+                <Link href="/contact" className="hover:text-white">
+                  Contact
+                </Link>
               </div>
             </div>
 
@@ -90,7 +101,10 @@ export default function Layout({ children }) {
               </div>
               <p className="mt-4 text-white/70">
                 Email:{" "}
-                <a className="text-brand hover:underline" href="mailto:aydenashwill@vigilux.co">
+                <a
+                  className="text-brand hover:underline"
+                  href="mailto:aydenashwill@vigilux.co"
+                >
                   aydenashwill@vigilux.co
                 </a>
               </p>
@@ -108,7 +122,8 @@ export default function Layout({ children }) {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs text-white/55">
             <div>© {new Date().getFullYear()} Vigilux. All rights reserved.</div>
             <div>
-              Developmental information only. Specifications subject to change. Unclassified marketing content.
+              Developmental information only. Specifications subject to change.
+              Unclassified marketing content.
             </div>
           </div>
         </div>

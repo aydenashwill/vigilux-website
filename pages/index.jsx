@@ -14,33 +14,35 @@ export default function Home() {
       </Head>
 
       <main className="bg-black text-white">
-        {/* HERO */}
-        <section className="relative overflow-hidden">
-          <img
-            src="/images/hero/hero-operator-drone-dusk.png"
-            alt="Vigilux operator and drone"
-            className="absolute inset-0 w-full h-full object-cover object-center brightness-[0.85]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/70" />
+        {/* HERO (extended to replace removed BRAND PANEL) */}
+        <section className="relative isolate overflow-hidden">
+          <div className="absolute inset-0 -z-10">
+            <img
+              src="/images/hero/hero-operator-drone-dusk.png"
+              alt="Vigilux operator and drone"
+              className="h-full w-full object-cover object-center brightness-[0.85]"
+            />
+            <div className="absolute inset-0 bg-black/60" />
+            {/* Slightly stronger bottom gradient since hero is taller */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-black/80" />
+          </div>
 
-          <div className="relative z-10 vx-container pt-20 pb-16 md:pt-28 md:pb-24">
-            <p className="text-white/70 uppercase tracking-[0.22em] text-xs md:text-sm flex items-center gap-3">
-              <span className="inline-block h-[1px] w-10 bg-white/30" />
-              The light that never sleeps
+          {/* Increased bottom padding to extend hero down the page */}
+          <div className="mx-auto max-w-6xl px-6 pt-20 pb-32 sm:pt-28 sm:pb-44">
+            <p className="text-sm tracking-[0.2em] uppercase text-white/80">
+              The Light That Never Sleeps
             </p>
 
-            <h1 className="mt-5 font-heading text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.18em]">
-              Clarity When It
-              <br />
-              Matters.
+            <h1 className="mt-4 max-w-5xl text-4xl font-semibold tracking-tight sm:text-5xl [text-wrap:balance]">
+              Clarity When it Matters
             </h1>
 
-            <p className="mt-6 max-w-2xl text-white/80 text-base md:text-xl leading-relaxed">
-              Rugged ISR & thermal relay systems designed for rapid integration,
-              reliable video paths, and operator-controlled workflows.
+            <p className="mt-5 max-w-3xl lg:max-w-4xl text-base leading-relaxed text-white/85 sm:text-lg [text-wrap:pretty]">
+              Rugged ISR & thermal relay systems designed for rapid integration, reliable video
+              paths, and operator-controlled workflows.
             </p>
 
-            <div className="mt-10 flex gap-4 flex-wrap">
+            <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/phoenix" className="vx-btn">
                 Phoenix Overwatch
               </Link>
@@ -52,20 +54,17 @@ export default function Home() {
               </Link>
             </div>
 
-            <p className="mt-6 text-white/55 text-sm">
-              Engineering-first. Validation-driven. No hype.
-            </p>
-          </div>
-        </section>
-
-        {/* BRAND PANEL */}
-        <section className="vx-container py-14 md:py-18">
-          <div className="vx-card overflow-hidden">
-            <img
-              src="/images/vigilux-clarity.png"
-              alt="Vigilux branding"
-              className="w-full h-auto"
-            />
+            <div className="mt-8 flex flex-wrap gap-3">
+              <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs tracking-wide text-white/80">
+                Engineering-first
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs tracking-wide text-white/80">
+                Validation-driven
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs tracking-wide text-white/80">
+                No hype
+              </span>
+            </div>
           </div>
         </section>
 
@@ -76,7 +75,7 @@ export default function Home() {
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                 Tested Architecture
               </div>
-              <p className="mt-3 text-white/70">
+              <p className="mt-3 text-white/75 leading-relaxed">
                 Measured validation plan with repeatable demos and documented results.
               </p>
             </div>
@@ -85,7 +84,7 @@ export default function Home() {
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                 Rapid Integration
               </div>
-              <p className="mt-3 text-white/70">
+              <p className="mt-3 text-white/75 leading-relaxed">
                 Designed for low-friction installs with standardized interfaces.
               </p>
             </div>
@@ -94,7 +93,7 @@ export default function Home() {
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                 Practical Video Paths
               </div>
-              <p className="mt-3 text-white/70">
+              <p className="mt-3 text-white/75 leading-relaxed">
                 CVBS baseline for broad compatibility. IP path as an option where needed.
               </p>
             </div>
@@ -103,7 +102,7 @@ export default function Home() {
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                 Production Credibility
               </div>
-              <p className="mt-3 text-white/70">
+              <p className="mt-3 text-white/75 leading-relaxed">
                 Controlled BOM, traveler, acceptance checklist, and traceability focus.
               </p>
             </div>
@@ -130,16 +129,12 @@ export default function Home() {
 
           <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="vx-card overflow-hidden">
-              <img
-                src="/images/ai-preview.png"
-                alt="AI preview"
-                className="w-full h-auto"
-              />
+              <img src="/images/ai-preview.png" alt="AI preview" className="w-full h-auto" />
               <div className="p-6">
                 <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                   Preview Module
                 </div>
-                <p className="mt-3 text-white/70">
+                <p className="mt-3 text-white/75 leading-relaxed">
                   Supervised tracking support and controlled overlays—only after validation.
                 </p>
               </div>
@@ -155,7 +150,7 @@ export default function Home() {
                 <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                   Thermal Workflow
                 </div>
-                <p className="mt-3 text-white/70">
+                <p className="mt-3 text-white/75 leading-relaxed">
                   Viewing + recording workflow designed for repeatable demo readiness.
                 </p>
               </div>
@@ -163,7 +158,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* REQUEST DEMO — CLEAN BACKGROUND (NO GHOST TEXT) */}
+        {/* REQUEST DEMO */}
         <section className="vx-container pb-24">
           <div className="vx-card p-10 md:p-12 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-black" />
@@ -172,7 +167,7 @@ export default function Home() {
               <h2 className="text-2xl md:text-3xl font-heading uppercase tracking-[0.14em]">
                 Request a Demo
               </h2>
-              <p className="mt-3 text-white/75 max-w-2xl">
+              <p className="mt-3 text-white/75 leading-relaxed max-w-2xl">
                 Schedule a technical discussion and receive the latest capability brief and validation approach.
               </p>
 

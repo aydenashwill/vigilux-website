@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   background: #000;
   color: #fff;
   height: 100%;
@@ -13,9 +14,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a { color: inherit; text-decoration: none; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-::selection { background: rgba(255, 106, 0, 0.25); }
+::selection {
+  background: rgba(255, 106, 0, 0.25);
+}
 
 .vx-container {
   max-width: 1100px;
@@ -26,9 +32,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 .vx-card {
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.04);
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 .vx-btn {
@@ -36,12 +42,12 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: center;
   padding: 12px 18px;
-  border: 1px solid rgba(255,255,255,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   transition: 160ms ease;
 }
 
 .vx-btn:hover {
-  border-color: rgba(255,255,255,0.45);
+  border-color: rgba(255, 255, 255, 0.45);
 }
 
 .vx-btn-primary {
@@ -55,14 +61,21 @@ a { color: inherit; text-decoration: none; }
   filter: brightness(1.05);
 }
 
-.vx-muted { color: rgba(255,255,255,0.72); }
-.vx-soft  { color: rgba(255,255,255,0.86); }
+.vx-muted {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.vx-soft {
+  color: rgba(255, 255, 255, 0.86);
+}
 
 .vx-hr {
   border: 0;
-  border-top: 1px solid rgba(255,255,255,0.10);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
 
-  @layer components {
+/* Tailwind component utilities MUST be top-level (not nested inside a selector) */
+@layer components {
   /* Desktop-first hero typography that still scales down cleanly */
   .vx-hero-kicker {
     @apply text-white/70 uppercase tracking-[0.22em] text-xs md:text-sm flex items-center gap-3;
@@ -79,4 +92,4 @@ a { color: inherit; text-decoration: none; }
     @apply mt-6 max-w-2xl text-white/85 text-base md:text-xl leading-relaxed;
   }
 }
-}
+

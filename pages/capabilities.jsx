@@ -14,36 +14,35 @@ export default function Capabilities() {
       </Head>
 
       <main className="bg-black text-white">
-        {/* HERO */}
-        <section className="relative overflow-hidden min-h-[75vh]">
-          <img
-            src="/images/hero/hero-groundstation-field.png"
-            alt="Vigilux rugged ground station"
-            className="absolute inset-0 w-full h-full object-cover object-center brightness-[0.9]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/25 to-black/85" />
+        {/* HERO (match About system) */}
+        <section className="relative isolate overflow-hidden">
+          <div className="absolute inset-0 -z-10">
+            <img
+              src="/images/hero/hero-groundstation-field.png"
+              alt="Vigilux rugged ground station"
+              className="h-full w-full object-cover object-center brightness-[0.9]"
+            />
+            <div className="absolute inset-0 bg-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-black/70" />
+          </div>
 
-          <div className="relative z-10 vx-container pt-24 pb-16 md:pt-32 md:pb-24">
-            <p className="vx-hero-kicker">
-              <span className="inline-block h-[1px] w-10 bg-white/30" />
+          <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+            <p className="text-sm tracking-[0.2em] uppercase text-white/80">
               Capabilities
             </p>
 
-            <h1 className="vx-hero-title">
-              Operator-Controlled
-              <br />
-              Thermal Workflows.
+            <h1 className="mt-4 max-w-5xl text-4xl font-semibold tracking-tight sm:text-5xl [text-wrap:balance]">
+              Operator-Controlled Thermal Workflows
             </h1>
 
-            <p className="vx-hero-lead">
-              Designed for field usability: rugged viewing + recording, practical video paths,
-              and validation-first integration — built to demonstrate, not just claim.
+            <p className="mt-5 max-w-3xl lg:max-w-4xl text-base leading-relaxed text-white/85 sm:text-lg [text-wrap:pretty]">
+              Built for field usability: rugged viewing and recording, practical video paths,
+              and validation-first integration — designed to demonstrate measurable performance,
+              not just claim it.
             </p>
 
-            <div className="mt-10 flex gap-4 flex-wrap">
-              <Link href="/phoenix" className="vx-btn">
-                Phoenix Overwatch
-              </Link>
+            {/* Single CTA set (no duplicates) */}
+            <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/contact" className="vx-btn vx-btn-primary">
                 Request a Demo
               </Link>
@@ -51,18 +50,30 @@ export default function Capabilities() {
                 Capability Brief
               </Link>
             </div>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs tracking-wide text-white/80">
+                Field-ready workflow
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs tracking-wide text-white/80">
+                Practical video paths
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs tracking-wide text-white/80">
+                Validation-first
+              </span>
+            </div>
           </div>
         </section>
 
-        {/* CAPABILITY GRID */}
-        <section className="vx-container py-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* CAPABILITY GRID (kept your content, tightened style consistency) */}
+        <section className="vx-container py-16 sm:py-20">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="vx-card p-6">
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                 Rugged Ground Workflow
               </div>
-              <p className="mt-3 text-white/70">
-                Viewing + recording optimized for repeatable field demos and operator confidence.
+              <p className="mt-3 text-white/75 leading-relaxed">
+                Viewing and recording optimized for repeatable field demos and operator confidence.
               </p>
             </div>
 
@@ -70,8 +81,8 @@ export default function Capabilities() {
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                 Practical Video Paths
               </div>
-              <p className="mt-3 text-white/70">
-                CVBS baseline for broad compatibility. Optional IP workflows as required.
+              <p className="mt-3 text-white/75 leading-relaxed">
+                CVBS baseline for broad compatibility, with optional IP workflows where required.
               </p>
             </div>
 
@@ -79,7 +90,7 @@ export default function Capabilities() {
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                 Operator-Assisted Overlays
               </div>
-              <p className="mt-3 text-white/70">
+              <p className="mt-3 text-white/75 leading-relaxed">
                 Clean UI with REC/LINK/BAT/GPS/MODE plus optional supervised tracking overlays.
               </p>
             </div>
@@ -88,8 +99,8 @@ export default function Capabilities() {
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                 Integration-First Design
               </div>
-              <p className="mt-3 text-white/70">
-                Standardized interfaces and repeatable installation approach for small UAS platforms.
+              <p className="mt-3 text-white/75 leading-relaxed">
+                Standardized interfaces and a repeatable installation approach for small UAS platforms.
               </p>
             </div>
 
@@ -97,7 +108,7 @@ export default function Capabilities() {
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                 Validation Plan
               </div>
-              <p className="mt-3 text-white/70">
+              <p className="mt-3 text-white/75 leading-relaxed">
                 Measured targets for dropout rate, reacquisition time, bitrate stability, and usability.
               </p>
             </div>
@@ -106,7 +117,7 @@ export default function Capabilities() {
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                 Production Credibility
               </div>
-              <p className="mt-3 text-white/70">
+              <p className="mt-3 text-white/75 leading-relaxed">
                 Controlled BOM, traveler, per-unit acceptance checklist, and traceability posture.
               </p>
             </div>

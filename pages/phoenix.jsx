@@ -14,33 +14,35 @@ export default function Phoenix() {
       </Head>
 
       <main className="bg-black text-white">
-        {/* HERO */}
-        <section className="relative overflow-hidden min-h-[85vh]">
-          <img
-            src="/images/hero/phoenix-hero-operator-uas.png"
-            alt="Phoenix Overwatch operator and UAS payload"
-            className="absolute inset-0 w-full h-full object-cover object-center brightness-[0.85]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black/85" />
+        {/* HERO (match About typography + layout) */}
+        <section className="relative isolate overflow-hidden">
+          <div className="absolute inset-0 -z-10">
+            <img
+              src="/images/hero/phoenix-hero-operator-uas.png"
+              alt="Phoenix Overwatch operator and UAS payload"
+              className="h-full w-full object-cover object-center brightness-[0.85]"
+            />
+            <div className="absolute inset-0 bg-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-black/70" />
+          </div>
 
-          <div className="relative z-10 vx-container pt-24 pb-20 md:pt-32 md:pb-28">
-            <p className="text-white/70 uppercase tracking-[0.22em] text-xs md:text-sm flex items-center gap-3">
-              <span className="inline-block h-[1px] w-10 bg-white/30" />
+          <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+            <p className="text-sm tracking-[0.2em] uppercase text-white/80">
               Phoenix Overwatch
             </p>
 
-            <h1 className="mt-5 font-heading text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.18em]">
-              Low-SWaP Thermal ISR
-              <br />
-              Built for Reality.
+            <h1 className="mt-4 max-w-5xl text-4xl font-semibold tracking-tight sm:text-5xl [text-wrap:balance]">
+              Low-SWaP Thermal ISR, Built for Reality
             </h1>
 
-            <p className="mt-6 max-w-2xl text-white/85 text-base md:text-xl leading-relaxed">
-              A rugged, under-slung thermal relay payload engineered for rapid UAS integration,
-              repeatable demos, and operator-controlled workflows — without unnecessary complexity.
+            <p className="mt-5 max-w-3xl lg:max-w-4xl text-base leading-relaxed text-white/85 sm:text-lg [text-wrap:pretty]">
+              A rugged, under-slung thermal relay payload engineered for rapid UAS
+              integration, repeatable demos, and operator-controlled workflows — without
+              unnecessary complexity.
             </p>
 
-            <div className="mt-10 flex gap-4 flex-wrap">
+            {/* Single CTA set (no repeats elsewhere on the page) */}
+            <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/contact" className="vx-btn vx-btn-primary">
                 Request a Demo
               </Link>
@@ -49,21 +51,30 @@ export default function Phoenix() {
               </Link>
             </div>
 
-            <p className="mt-6 text-white/55 text-sm">
-              Design-to-cost. Validation-driven. Mission-focused.
-            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs tracking-wide text-white/80">
+                Design-to-cost
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs tracking-wide text-white/80">
+                Validation-driven
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs tracking-wide text-white/80">
+                Operator-controlled
+              </span>
+            </div>
           </div>
         </section>
 
         {/* OVERVIEW */}
-        <section className="vx-container py-24">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section className="vx-container py-16 sm:py-20">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="vx-card p-6">
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                 Payload-First Design
               </div>
-              <p className="mt-3 text-white/70">
-                Optimized for under-slung mounting on small UAS platforms with minimal integration friction.
+              <p className="mt-3 text-white/75 leading-relaxed">
+                Optimized for under-slung mounting on small UAS platforms with minimal
+                integration friction.
               </p>
             </div>
 
@@ -71,8 +82,9 @@ export default function Phoenix() {
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                 Practical Video Paths
               </div>
-              <p className="mt-3 text-white/70">
-                CVBS baseline for immediate compatibility, with optional IP workflows where required.
+              <p className="mt-3 text-white/75 leading-relaxed">
+                CVBS baseline for immediate compatibility, with optional IP workflows
+                where required.
               </p>
             </div>
 
@@ -80,35 +92,27 @@ export default function Phoenix() {
               <div className="text-sm uppercase tracking-[0.18em] text-white/80">
                 Operator-Controlled
               </div>
-              <p className="mt-3 text-white/70">
-                No black boxes. Clear controls, repeatable results, and documented performance.
+              <p className="mt-3 text-white/75 leading-relaxed">
+                No black boxes. Clear controls, repeatable results, and documented
+                performance.
               </p>
             </div>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="vx-container pb-28">
-          <div className="vx-card p-12 relative overflow-hidden">
+        {/* SUPPORTING CTA (no buttons, no duplicates) */}
+        <section className="vx-container pb-16 sm:pb-20">
+          <div className="vx-card p-8 sm:p-12 relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur">
             <div className="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-black" />
 
             <div className="relative z-10">
-              <h2 className="text-2xl md:text-3xl font-heading uppercase tracking-[0.14em]">
-                See Phoenix Overwatch in Action
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight [text-wrap:balance]">
+                Ready to evaluate Phoenix Overwatch?
               </h2>
-              <p className="mt-3 text-white/80 max-w-2xl">
-                Schedule a technical discussion and review integration details, validation approach,
-                and measured performance targets.
+              <p className="mt-3 text-white/80 max-w-3xl lg:max-w-4xl leading-relaxed [text-wrap:pretty]">
+                Review integration details, validation approach, and measured performance
+                targets through the demo request or capability brief above.
               </p>
-
-              <div className="mt-7 flex gap-4 flex-wrap">
-                <Link href="/contact" className="vx-btn vx-btn-primary">
-                  Request a Demo
-                </Link>
-                <Link href="/brief" className="vx-btn">
-                  Open Capability Brief
-                </Link>
-              </div>
             </div>
           </div>
         </section>
