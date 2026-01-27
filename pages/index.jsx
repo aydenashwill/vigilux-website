@@ -1,8 +1,20 @@
 // pages/index.jsx
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    // Respect "Reduce Motion" accessibility settings and avoid autoplay video for those users.
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const apply = () => setReduceMotion(mq.matches);
+    apply();
+    mq.addEventListener?.("change", apply);
+    return () => mq.removeEventListener?.("change", apply);
+  }, []);
+
   return (
     <>
       <Head>
@@ -16,15 +28,37 @@ export default function Home() {
       <main className="bg-black text-white">
         {/* HERO (extended to replace removed BRAND PANEL) */}
         <section className="relative isolate overflow-hidden">
+          {/* Background media */}
           <div className="absolute inset-0 -z-10">
-            <img
-              src="/images/hero/hero-operator-drone-dusk.png"
-              alt="Vigilux operator and drone"
-              className="h-full w-full object-cover object-center brightness-[0.85]"
-            />
+            {!reduceMotion ? (
+              <video
+                className="h-full w-full object-cover object-center brightness-[0.95]"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/video/hero-poster.jpg"
+              >
+                {/* Prefer WebM first for size/quality, MP4 fallback for Safari */}
+                <source src="/video/hero.webm" type="video/webm" />
+                <source src="/video/hero.mp4" type="video/mp4" />
+              </video>
+            ) : (
+              // Fallback for reduce-motion users (and as a safe baseline)
+              <img
+                src="/video/hero-poster.jpg"
+                alt="Vigilux hero background"
+                className="h-full w-full object-cover object-center brightness-[0.95]"
+              />
+            )}
+
+            {/* Overlays for legibility + cinematic look */}
             <div className="absolute inset-0 bg-black/60" />
             {/* Slightly stronger bottom gradient since hero is taller */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-black/80" />
+            {/* Subtle spotlight bloom (keeps it looking premium, not flat) */}
+            <div className="absolute inset-0 [background:radial-gradient(60%_45%_at_50%_25%,rgba(255,255,255,0.08),transparent_60%)]" />
           </div>
 
           {/* Increased bottom padding to extend hero down the page */}

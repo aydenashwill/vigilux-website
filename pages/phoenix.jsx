@@ -1,8 +1,20 @@
 // pages/phoenix.jsx
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Phoenix() {
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    // Respect "Reduce Motion" accessibility settings and avoid autoplay video for those users.
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const apply = () => setReduceMotion(mq.matches);
+    apply();
+    mq.addEventListener?.("change", apply);
+    return () => mq.removeEventListener?.("change", apply);
+  }, []);
+
   return (
     <>
       <Head>
@@ -17,13 +29,30 @@ export default function Phoenix() {
         {/* HERO (match About typography + layout) */}
         <section className="relative isolate overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <img
-              src="/images/hero/phoenix-hero-operator-uas.png"
-              alt="Phoenix Overwatch operator and UAS payload"
-              className="h-full w-full object-cover object-center brightness-[0.85]"
-            />
+            {!reduceMotion ? (
+              <video
+                className="h-full w-full object-cover object-center brightness-[0.95]"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/video/phoenix-hero-poster.jpg"
+              >
+                <source src="/video/phoenix-hero.webm" type="video/webm" />
+                <source src="/video/phoenix-hero.mp4" type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                src="/video/phoenix-hero-poster.jpg"
+                alt="Phoenix Overwatch operator and UAS payload"
+                className="h-full w-full object-cover object-center brightness-[0.95]"
+              />
+            )}
+
             <div className="absolute inset-0 bg-black/60" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-black/70" />
+            <div className="absolute inset-0 [background:radial-gradient(60%_45%_at_50%_25%,rgba(255,255,255,0.08),transparent_60%)]" />
           </div>
 
           <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">

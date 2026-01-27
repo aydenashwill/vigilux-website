@@ -14,20 +14,31 @@ export default function About() {
       <main className="bg-black text-white">
         {/* HERO */}
         <section className="relative isolate overflow-hidden">
-          {/* Background image */}
+          {/* Background image (CONTAIN-style scaling, no cropping) */}
           <div
-            className="absolute inset-0 -z-10 bg-no-repeat bg-center"
+            className={[
+              "absolute inset-0 -z-10",
+              "bg-black bg-no-repeat",
+              // keep it centered; a slight vertical bias helps with text below the phoenix
+              "bg-[position:center_48%]",
+              // responsive sizing: smaller on mobile, larger on desktop (still contain-like)
+              "bg-[length:92%_auto]",
+              "md:bg-[length:1100px_auto]",
+              "lg:bg-[length:1400px_auto]",
+              "xl:bg-[length:1600px_auto]",
+            ].join(" ")}
             style={{
-              backgroundImage: "url('/images/hero/hero-about-phoenix-logo.png')",
-              backgroundSize: "90% auto", // zoom out slightly so text isn't cut off
+              backgroundImage: "url('/images/hero/about-hero.png')",
             }}
           />
+
           {/* Dark overlay for readability */}
           <div className="absolute inset-0 -z-10 bg-black/60" />
           {/* Subtle gradient for depth */}
           <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/35 via-black/15 to-black/70" />
 
-          <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+          {/* IMPORTANT: give the hero enough height so the image can actually be seen */}
+          <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28 min-h-[520px] md:min-h-[600px]">
             <p className="text-sm tracking-[0.2em] uppercase text-white/80">
               About Vigilux
             </p>
@@ -142,9 +153,12 @@ export default function About() {
                 A former collegiate football and baseball athlete, Ayden
                 approaches leadership and engineering with discipline,
                 resilience, and a competitive, execution-driven mindset. He
-                founded Vigilux with a clear mission: <strong>to increase
-                operator safety, reduce cognitive and operational burden, and
-                provide operators with a decisive tactical advantage</strong>{" "}
+                founded Vigilux with a clear mission:{" "}
+                <strong>
+                  to increase operator safety, reduce cognitive and operational
+                  burden, and provide operators with a decisive tactical
+                  advantage
+                </strong>{" "}
                 through reliable, easy-to-use sensing systems. He oversees
                 end-to-end execution—from system architecture and prototyping to
                 supplier engagement and customer alignment—ensuring Vigilux

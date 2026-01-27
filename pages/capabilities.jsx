@@ -1,8 +1,19 @@
 // pages/capabilities.jsx
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Capabilities() {
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const apply = () => setReduceMotion(mq.matches);
+    apply();
+    mq.addEventListener?.("change", apply);
+    return () => mq.removeEventListener?.("change", apply);
+  }, []);
+
   return (
     <>
       <Head>
@@ -17,13 +28,30 @@ export default function Capabilities() {
         {/* HERO (match About system) */}
         <section className="relative isolate overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <img
-              src="/images/hero/hero-groundstation-field.png"
-              alt="Vigilux rugged ground station"
-              className="h-full w-full object-cover object-center brightness-[0.9]"
-            />
+            {!reduceMotion ? (
+              <video
+                className="h-full w-full object-cover object-center brightness-[0.97]"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/video/capabilities-hero-poster.jpg"
+              >
+                <source src="/video/capabilities-hero.webm" type="video/webm" />
+                <source src="/video/capabilities-hero.mp4" type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                src="/video/capabilities-hero-poster.jpg"
+                alt="Vigilux rugged ground station"
+                className="h-full w-full object-cover object-center brightness-[0.97]"
+              />
+            )}
+
             <div className="absolute inset-0 bg-black/60" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-black/70" />
+            <div className="absolute inset-0 [background:radial-gradient(60%_45%_at_50%_25%,rgba(255,255,255,0.08),transparent_60%)]" />
           </div>
 
           <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
@@ -65,7 +93,7 @@ export default function Capabilities() {
           </div>
         </section>
 
-        {/* CAPABILITY GRID (kept your content, tightened style consistency) */}
+        {/* CAPABILITY GRID */}
         <section className="vx-container py-16 sm:py-20">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="vx-card p-6">
