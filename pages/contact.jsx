@@ -1,6 +1,8 @@
 // pages/contact.jsx
 import Head from "next/head";
 
+const EMAIL_PRESIDENT = "aydenashwill@vigilux.co";
+
 export default function Contact() {
   return (
     <>
@@ -39,9 +41,9 @@ export default function Contact() {
             </h1>
 
             <p className="mt-5 max-w-3xl lg:max-w-4xl text-base leading-relaxed text-white/85 sm:text-lg [text-wrap:pretty]">
-              For engineering and technical evaluation discussions, contact the President
-              directly. For demo coordination, partnerships, and procurement-related
-              inquiries, contact Business Operations.
+              For engineering and technical evaluation discussions, contact the President directly.
+              For demo coordination, partnerships, and procurement-related inquiries, use the
+              general contact route below.
             </p>
           </div>
         </section>
@@ -56,15 +58,16 @@ export default function Contact() {
               </div>
 
               <p className="mt-3 text-white/80 leading-relaxed">
-                System architecture, integration constraints, validation approach, and
-                technical alignment.
+                System architecture, integration constraints, validation approach, and technical alignment.
               </p>
 
               <a
                 className="mt-4 inline-block text-lg text-white hover:underline"
-                href="mailto:aydenashwill@vigilux.co"
+                href={`mailto:${EMAIL_PRESIDENT}?subject=${encodeURIComponent(
+                  "Vigilux — Technical Evaluation"
+                )}`}
               >
-                aydenashwill@vigilux.co
+                {EMAIL_PRESIDENT}
               </a>
             </article>
 
@@ -80,9 +83,11 @@ export default function Contact() {
 
               <a
                 className="mt-4 inline-block text-lg text-white hover:underline"
-                href="mailto:connerrucker@vigilux.co"
+                href={`mailto:${EMAIL_PRESIDENT}?subject=${encodeURIComponent(
+                  "Vigilux — Demos / Partnerships / Procurement"
+                )}`}
               >
-                connerrucker@vigilux.co
+                {EMAIL_PRESIDENT}
               </a>
             </article>
           </div>

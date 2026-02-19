@@ -1,3 +1,4 @@
+// pages/about.jsx
 import Head from "next/head";
 
 export default function About() {
@@ -7,37 +8,25 @@ export default function About() {
         <title>About | Vigilux</title>
         <meta
           name="description"
-          content="Learn about Vigilux Systems LLC, our mission, and the leadership team building mission-ready sensing systems."
+          content="Learn about Vigilux Systems LLC, our mission, and founder Ayden Ashwill’s focus on mission-ready sensing systems."
         />
       </Head>
 
       <main className="bg-black text-white">
-        {/* HERO */}
+        {/* HERO (match Contact page hero) */}
         <section className="relative isolate overflow-hidden">
-          {/* Background image (CONTAIN-style scaling, no cropping) */}
-          <div
-            className={[
-              "absolute inset-0 -z-10",
-              "bg-black bg-no-repeat",
-              // keep it centered; a slight vertical bias helps with text below the phoenix
-              "bg-[position:center_48%]",
-              // responsive sizing: smaller on mobile, larger on desktop (still contain-like)
-              "bg-[length:92%_auto]",
-              "md:bg-[length:1100px_auto]",
-              "lg:bg-[length:1400px_auto]",
-              "xl:bg-[length:1600px_auto]",
-            ].join(" ")}
-            style={{
-              backgroundImage: "url('/images/hero/about-hero.png')",
-            }}
-          />
+          <div className="absolute inset-0 -z-10">
+            <div
+              className="h-full w-full bg-cover bg-center"
+              style={{ backgroundImage: "url('/images/contact-hero.png')" }}
+            />
+            <div className="absolute inset-0 bg-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-black/70" />
 
-          {/* Dark overlay for readability */}
-          <div className="absolute inset-0 -z-10 bg-black/60" />
-          {/* Subtle gradient for depth */}
-          <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/35 via-black/15 to-black/70" />
+            {/* Fallback gradient base */}
+            <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black via-black/90 to-black" />
+          </div>
 
-          {/* IMPORTANT: give the hero enough height so the image can actually be seen */}
           <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28 min-h-[520px] md:min-h-[600px]">
             <p className="text-sm tracking-[0.2em] uppercase text-white/80">
               About Vigilux
@@ -85,8 +74,8 @@ export default function About() {
               </p>
 
               <p className="mt-5 text-white/80 leading-relaxed">
-                Our focus is disciplined engineering, design-to-cost execution,
-                and measurable performance. We build systems that hold up under
+                Vigilux focuses on disciplined engineering, design-to-cost execution,
+                and measurable performance. The goal is systems that hold up under
                 operational constraints and remain credible to defense buyers,
                 partners, and national security stakeholders.
               </p>
@@ -126,14 +115,13 @@ export default function About() {
                 Leadership
               </h2>
               <p className="mt-2 max-w-3xl text-white/75 leading-relaxed">
-                Vigilux is led by a team focused on disciplined execution,
+                Vigilux is led by Ayden Ashwill, focused on disciplined execution,
                 technical rigor, and operational credibility.
               </p>
             </div>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {/* AYDEN */}
+          <div className="mt-10 grid gap-6 md:grid-cols-1">
             <article className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
               <h3 className="text-xl font-semibold">Ayden Ashwill</h3>
               <p className="mt-1 text-sm text-white/70">President &amp; Founder</p>
@@ -172,110 +160,6 @@ export default function About() {
                 deliver sensing solutions that simplify the operator’s job while
                 meeting the evolving demands of small-UAS operators, defense
                 partners, and national security stakeholders.
-              </p>
-            </article>
-
-            {/* CONNER */}
-            <article className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-              <h3 className="text-xl font-semibold">Conner Rucker</h3>
-              <p className="mt-1 text-sm text-white/70">
-                Executive of Business Operations
-              </p>
-
-              <p className="mt-4 text-white/85 leading-relaxed">
-                Conner Rucker serves as Executive of Business Operations at
-                Vigilux, where he leads strategy, partnerships, and
-                organizational execution. A former collegiate athlete and MBA
-                graduate of Millsaps College, Conner brings a disciplined,
-                mission-focused approach to building high-performance ventures
-                in complex industries.
-              </p>
-
-              <p className="mt-4 text-white/85 leading-relaxed">
-                With professional experience spanning global and industrial
-                markets, Conner’s background includes work across the maritime
-                sector supporting aerospace, geospatial surveying, offshore
-                energy, offshore wind, and defense operations. He is driven by a
-                commitment to integrity, accountability, and operational
-                excellence, with a clear focus on advancing technologies that
-                enhance safety and national security.
-              </p>
-            </article>
-
-            {/* NOAH */}
-            <article className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur md:col-span-2">
-              <h3 className="text-xl font-semibold">Noah Browning</h3>
-              <p className="mt-1 text-sm text-white/70">
-                Chief Technology Officer (CTO)
-              </p>
-
-              <p className="mt-4 text-white/85 leading-relaxed">
-                Noah Browning serves as Chief Technology Officer at Vigilux,
-                where he is responsible for technical strategy, system
-                architecture, and the integration of software, hardware, and
-                secure communications across the company’s platforms.
-              </p>
-
-              <p className="mt-4 text-white/85 leading-relaxed">
-                With a foundation in Electrical and Computer Engineering, Noah
-                brings professional experience from the aviation industry, where
-                he worked in component reliability engineering and systems
-                analysis. In this role, he evaluated failure modes, operational
-                risk, and lifecycle performance of aircraft components,
-                developing a disciplined approach to safety-critical systems,
-                verification, and long-term reliability. This background
-                directly informs his emphasis on robustness, traceability, and
-                fault-tolerant design.
-              </p>
-
-              <p className="mt-4 text-white/85 leading-relaxed">
-                In addition to his aviation work, Noah has extensive hands-on
-                experience in robotics and autonomous systems, spanning sensors,
-                actuators, embedded control, and real-time software. He competed
-                and placed for the University of Memphis Robotics team in Spring
-                2025.
-              </p>
-
-              <p className="mt-4 text-white/85 leading-relaxed">
-                Noah’s work bridges rigorous engineering standards with
-                practical execution, ensuring that complex technologies are not
-                only innovative, but reliable, secure, and ready for real-world
-                deployment.
-              </p>
-            </article>
-
-            {/* AUSTIN */}
-            <article className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur md:col-span-2">
-              <h3 className="text-xl font-semibold">Austin Russell</h3>
-              <p className="mt-1 text-sm text-white/70">
-                Chief Executive Officer (CEO)
-              </p>
-
-              <p className="mt-4 text-white/85 leading-relaxed">
-                Austin Russell is the Chief Executive Officer of Vigilux, leading
-                the company with a clear vision for innovation, disciplined
-                growth, and long-term value creation. He holds a Master’s degree
-                in Business and brings a rare combination of strategic insight,
-                financial acumen, and real-world operating experience to the
-                role.
-              </p>
-
-              <p className="mt-4 text-white/85 leading-relaxed">
-                A former collegiate athlete, Austin approaches leadership with
-                focus, resilience, and a competitive drive to win in the
-                marketplace. As CEO, he is responsible for defining Vigilux’s
-                strategic direction, building high-performing teams, and
-                executing scalable growth initiatives. He works closely with
-                investors and leadership to align capital strategy, operational
-                execution, and market expansion, ensuring Vigilux is positioned
-                to grow efficiently while maintaining strong fundamentals.
-              </p>
-
-              <p className="mt-4 text-white/85 leading-relaxed">
-                Austin’s hands-on leadership style and data-driven approach
-                enable Vigilux to identify opportunity, manage risk, and execute
-                decisively—laying the foundation for sustainable growth and
-                enduring shareholder value.
               </p>
             </article>
           </div>

@@ -131,7 +131,7 @@ export default function handler(req, res) {
     .fontSize(9)
     .fillColor("#444444")
     .text(
-      "Vigilux — “The light that never sleeps.”  |  Contact: aydenashwill@vigilux.co | connerrucker@vigilux.co",
+      "Vigilux — “The light that never sleeps.”  |  Contact: aydenashwill@vigilux.co",
       { align: "left" }
     );
 

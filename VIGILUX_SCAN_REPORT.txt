@@ -1,0 +1,35 @@
+﻿=== Vigilux Scan Report ===
+Root: C:\Users\crash\vigilux-website
+Files scanned: 22
+
+--- EMAIL ADDRESSES FOUND ---
+aydenashwill@vigilux.co
+connerrucker@vigilux.co
+
+--- EMAIL LOCATIONS (file:line) ---
+C:\Users\crash\vigilux-website\components\Layout.jsx:116  href="mailto:aydenashwill@vigilux.co"
+C:\Users\crash\vigilux-website\components\Layout.jsx:118  aydenashwill@vigilux.co
+C:\Users\crash\vigilux-website\pages\contact.jsx:65  href="mailto:aydenashwill@vigilux.co"
+C:\Users\crash\vigilux-website\pages\contact.jsx:67  aydenashwill@vigilux.co
+C:\Users\crash\vigilux-website\pages\contact.jsx:83  href="mailto:connerrucker@vigilux.co"
+C:\Users\crash\vigilux-website\pages\contact.jsx:85  connerrucker@vigilux.co
+C:\Users\crash\vigilux-website\pages\api\brief.js:134  "Vigilux — “The light that never sleeps.”  |  Contact: aydenashwill@vigilux.co | connerrucker@vigilux.co",
+
+--- MAILTO LINKS (file:line) ---
+C:\Users\crash\vigilux-website\components\Layout.jsx:116  href="mailto:aydenashwill@vigilux.co"
+C:\Users\crash\vigilux-website\pages\contact.jsx:65  href="mailto:aydenashwill@vigilux.co"
+C:\Users\crash\vigilux-website\pages\contact.jsx:83  href="mailto:connerrucker@vigilux.co"
+
+--- TEAM / BIO / LEADERSHIP KEYWORDS (file:line) ---
+C:\Users\crash\vigilux-website\pages\about.jsx:10  content="Learn about Vigilux Systems LLC, our mission, and the leadership team building mission-ready sensing systems."
+C:\Users\crash\vigilux-website\pages\about.jsx:121  {/* LEADERSHIP */}
+C:\Users\crash\vigilux-website\pages\about.jsx:126  Leadership
+C:\Users\crash\vigilux-website\pages\about.jsx:129  Vigilux is led by a team focused on disciplined execution,
+C:\Users\crash\vigilux-website\pages\about.jsx:154  approaches leadership and engineering with discipline,
+C:\Users\crash\vigilux-website\pages\about.jsx:170  Ayden’s leadership emphasizes technical rigor, design-to-cost
+C:\Users\crash\vigilux-website\pages\about.jsx:235  and placed for the University of Memphis Robotics team in Spring
+C:\Users\crash\vigilux-website\pages\about.jsx:264  A former collegiate athlete, Austin approaches leadership with
+C:\Users\crash\vigilux-website\pages\about.jsx:267  strategic direction, building high-performing teams, and
+C:\Users\crash\vigilux-website\pages\about.jsx:269  investors and leadership to align capital strategy, operational
+C:\Users\crash\vigilux-website\pages\about.jsx:275  Austin’s hands-on leadership style and data-driven approach
+C:\Users\crash\vigilux-website\pages\_app.jsx:15  {/* Microsoft Teams Customer Chat Widget */}
